@@ -21,9 +21,7 @@ export default function Categories() {
                       className="rounded-full"
                     />
                   </div>
-                  <div>
-                    <span>{value.name}</span>
-                  </div>
+                  <div>{value.name}</div>
                 </div>
               </Link>
             </div>

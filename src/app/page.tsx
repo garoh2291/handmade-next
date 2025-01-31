@@ -2,10 +2,10 @@ import Sales from "@/components/Sales";
 import Navbar from "@/components/Navbar";
 import Slider from "@/components/Slider";
 import Categories from "@/components/Categories";
-import Tops from "@/components/Tops";
 import Banner from "@/components/Banner";
 import Exclusive from "@/components/Exclusive";
 import Footer from "@/components/Footer";
+import Popular from "@/components/Popular";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <Navbar />
       <Slider />
       <Categories />
-      <Tops />
+      <Popular />
       <Banner />
       <Exclusive />
       <Footer />
