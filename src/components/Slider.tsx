@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { sliderImg } from "@/constants/Slider";
+import { slider } from "@/constants/Slider";
 import Image from "next/image";
 
 export default function Slider() {
@@ -22,23 +22,21 @@ export default function Slider() {
       ]}
     >
       <CarouselContent>
-        {sliderImg.map(
-          (value: { url: string; title: string }, index: number) => {
-            return (
-              <CarouselItem key={index}>
-                <div className="relative w-full h-[500px]">
-                  <Image
-                    src={value.url}
-                    alt={value.title}
-                    fill
-                    className="object-cover"
-                    priority={index === 0}
-                  />
-                </div>
-              </CarouselItem>
-            );
-          }
-        )}
+        {slider.map(({ id, url, img, name }, index) => {
+          return (
+            <CarouselItem key={id}>
+              <div className="relative w-full h-[500px]">
+                <Image
+                  src={img}
+                  alt={name}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                />
+              </div>
+            </CarouselItem>
+          );
+        })}
       </CarouselContent>
       <CarouselPrevious className="absolute left-5" />
       <CarouselNext className="absolute right-5" />

@@ -1,22 +1,32 @@
-export const sliderImg = [
+export const slider = [
   {
-    url: "/assets/slider/1.png",
-    title: "Slider 1",
+    id: "1234567890",
+    img: "/assets/slider/1.png",
+    name: "Slider 1",
+    url: "slider1",
   },
   {
-    url: "/assets/slider/2.png",
-    title: "Slider 2",
+    id: "2345678901",
+    img: "/assets/slider/2.png",
+    name: "Slider 2",
+    url: "slider2",
   },
   {
-    url: "/assets/slider/3.png",
-    title: "Slider 3",
+    id: "3456789012",
+    img: "/assets/slider/3.png",
+    name: "Slider 3",
+    url: "slider3",
   },
   {
-    url: "/assets/slider/4.png",
-    title: "Slider 4",
+    id: "4567890123",
+    img: "/assets/slider/4.png",
+    name: "Slider 4",
+    url: "slider4",
   },
   {
-    url: "/assets/slider/5.png",
-    title: "Slider 5",
+    id: "5678901234",
+    img: "/assets/slider/5.png",
+    name: "Slider 5",
+    url: "slider5",
   },
 ];
