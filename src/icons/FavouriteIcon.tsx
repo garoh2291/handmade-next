@@ -1,29 +1,25 @@
-"use client";
-import React from "react";
-
-interface FavoriteIconProps {
-  fill: boolean;
-  className?: string;
-  size?: number;
-  color?: string;
-}
-
-export default function FavoriteIcon({
-  fill,
-  className,
-  size = 16,
-  color = "#ffb93b",
-}: FavoriteIconProps) {
+export const FavoriteIcon = (
+  props: React.SVGProps<SVGSVGElement> & { isFavorite?: boolean }
+) => {
+  const {
+    isFavorite,
+    className,
+    width = 16,
+    height = 16,
+    color = "#ffb93b",
+    ...rest
+  } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill={fill ? color : "none"}
+      fill={isFavorite ? color : "none"}
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke={color}
       className={className}
-      width={size}
-      height={size}
+      width={width}
+      height={height}
+      {...rest}
     >
       <path
         strokeLinecap="round"
@@ -32,4 +28,4 @@ export default function FavoriteIcon({
       />
     </svg>
   );
-}
+};

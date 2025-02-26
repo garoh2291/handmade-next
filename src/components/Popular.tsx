@@ -1,11 +1,10 @@
 "use client";
-import { popular } from "@/constants/popular";
+import { popular } from "@/constants/Popular";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import StarRating from "./StarRating";
-import { Button } from "./ui/button";
-import FavouriteIcon from "./FavouriteIcon";
+import { FavoriteIcon } from "../icons/FavouriteIcon";
 
 export default function Popular() {
   return (
@@ -53,7 +52,11 @@ export default function Popular() {
                   </div>
                 ) : null}
                 <div className="absolute h-auto top-3 right-3 flex items-center justify-center p-1 rounded-full bg-gray-600">
-                  <FavouriteIcon fill={value.favorite} size={24} />
+                  <FavoriteIcon
+                    isFavorite={value.favorite}
+                    width={24}
+                    height={24}
+                  />
                 </div>
               </div>
             );

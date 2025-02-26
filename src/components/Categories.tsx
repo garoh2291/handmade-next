@@ -1,5 +1,5 @@
 "use client";
-import { categories } from "@/constants/categories";
+import { categories } from "@/constants/Categories";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,6 +18,7 @@ export default function Categories() {
                       src={value.img}
                       alt={value.name}
                       fill
+                      objectFit="cover"
                       className="rounded-full"
                     />
                   </div>

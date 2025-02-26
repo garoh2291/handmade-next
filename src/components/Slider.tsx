@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { sliderImg } from "@/constants/slider";
+import { sliderImg } from "@/constants/Slider";
 import Image from "next/image";
 
 export default function Slider() {

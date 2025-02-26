@@ -8,8 +8,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { shop } from "@/constants/shop";
-import { blog } from "@/constants/blog";
+import { shop } from "@/constants/Shop";
+import { blog } from "@/constants/Blog";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
