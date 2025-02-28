@@ -8,8 +8,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { shop } from "@/constants/shop";
-import { blog } from "@/constants/blog";
+import { shop } from "@/constants/Shop";
+import { blog } from "@/constants/Blog";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
@@ -29,14 +29,16 @@ export default function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger>Shop</DropdownMenuTrigger>
             <DropdownMenuContent>
-              {shop.map((item: string, index: number) => {
+              {shop.map(({ id, name, url }) => {
                 return (
-                  <DropdownMenuItem
-                    className="focus:bg-hm-yellow-bg focus:cursor-pointer"
-                    key={index}
-                  >
-                    {item}
-                  </DropdownMenuItem>
+                  <Link href={url}>
+                    <DropdownMenuItem
+                      className="focus:bg-hm-yellow-bg focus:cursor-pointer"
+                      key={id}
+                    >
+                      {name}
+                    </DropdownMenuItem>
+                  </Link>
                 );
               })}
             </DropdownMenuContent>
@@ -46,14 +48,16 @@ export default function Navbar() {
           <DropdownMenu>
             <DropdownMenuTrigger>Blog</DropdownMenuTrigger>
             <DropdownMenuContent>
-              {blog.map((item: string, index: number) => {
+              {blog.map(({ id, name, url }) => {
                 return (
-                  <DropdownMenuItem
-                    className="focus:bg-hm-yellow-bg focus:cursor-pointer"
-                    key={index}
-                  >
-                    {item}
-                  </DropdownMenuItem>
+                  <Link href={url}>
+                    <DropdownMenuItem
+                      className="focus:bg-hm-yellow-bg focus:cursor-pointer"
+                      key={id}
+                    >
+                      {name}
+                    </DropdownMenuItem>
+                  </Link>
                 );
               })}
             </DropdownMenuContent>
