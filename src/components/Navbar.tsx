@@ -31,11 +31,8 @@ export default function Navbar() {
             <DropdownMenuContent>
               {shop.map(({ id, name, url }) => {
                 return (
-                  <Link href={url}>
-                    <DropdownMenuItem
-                      className="focus:bg-hm-yellow-bg focus:cursor-pointer"
-                      key={id}
-                    >
+                  <Link key={id} href={url}>
+                    <DropdownMenuItem className="focus:bg-hm-yellow-bg focus:cursor-pointer">
                       {name}
                     </DropdownMenuItem>
                   </Link>
@@ -50,11 +47,8 @@ export default function Navbar() {
             <DropdownMenuContent>
               {blog.map(({ id, name, url }) => {
                 return (
-                  <Link href={url}>
-                    <DropdownMenuItem
-                      className="focus:bg-hm-yellow-bg focus:cursor-pointer"
-                      key={id}
-                    >
+                  <Link key={id} href={url}>
+                    <DropdownMenuItem className="focus:bg-hm-yellow-bg focus:cursor-pointer">
                       {name}
                     </DropdownMenuItem>
                   </Link>
