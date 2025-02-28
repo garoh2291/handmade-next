@@ -22,7 +22,7 @@ export default function Slider() {
       ]}
     >
       <CarouselContent>
-        {slider.map(({ id, url, img, name }, index) => {
+        {slider.map(({ id, img, name }, index) => {
           return (
             <CarouselItem key={id}>
               <div className="relative w-full h-[500px]">
